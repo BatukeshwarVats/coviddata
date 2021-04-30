@@ -1,0 +1,1 @@
+web: gunicorn coviddata.wsgi --log-file -
