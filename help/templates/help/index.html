@@ -1,0 +1,104 @@
+{% extends 'help/basic.html' %}
+
+{% block title%} Title of About{% endblock %}
+
+
+
+{% block body %}
+      <br>
+      <br>
+<div class="container">
+      <form action="/help/search/" method="post">{% csrf_token %}
+            
+        <div class="form-row">
+          <div class="form-group col-md-2">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" id="inputCity" name="inputCity">
+          </div>
+
+
+        <div class="form-group col-md-2">
+          <label for="inputState">State</label>
+          <select id="inputState" name="inputState" class="form-control">
+            <option selected>Andhra Pradesh.</option>
+            <option selected>Arunachal Pradesh.</option>
+            <option selected>Assam.</option>
+            <option selected>Bihar.</option>
+            <option selected>Chhatisgarh.</option>
+            <option selected>Goa.</option>
+            <option selected>Gujrat.</option>
+            <option selected>Haryana.</option>
+            <option selected>J & K</option>
+
+
+  
+          </select>
+        </div>
+
+        <div class="form-group col-md-2">
+            <label for="tag">Tags</label>
+            <select id="tags" name="tags" class="form-control">
+                <option selected>Plasma Donor</option>
+                <option selected>Oxygen Cylinder</option>
+                <option selected>Blood Donor</option>
+                <option selected>Remdesivir</option>
+                <option selected>Beds</option>
+                <option selected>Others</option>
+    
+            </select>
+        </div>
+        <button type="submit" class="btn btn-success " ;">Search for help</button>
+  
+  
+
+
+      </div>
+      </form>
+</div>
+      <br>
+      <br>
+
+      <div class="container">
+        <h2 class="text-center"><u>Latest Resources.</u></h2><br>            
+        <table class="table table-dark table-striped">
+          <thead>
+            <tr>
+              <th>State</th>
+              <th>City</th>
+              <th>Tags</th>
+              <th>Name</th>
+              <th>Contact</th>
+              <th>Discription</th>
+            </tr>
+          </thead>
+          <tbody>
+          <!-- jinja2 Technique -->
+          {% if data_info %}  
+            {% for data in data_info %}
+            <tr>
+              <td>{{data.state}}</td>
+              <td>{{data.city}}</td>
+              <td>{{data.tags}}</td>
+              <td>{{data.name}}</td>
+              <td>{{data.contact}}</td>
+              <td>{{data.disc}}</td>
+            </tr>
+            {% endfor %}
+          {% else %}
+            <p>No polls are available.</p>
+          {% endif %}
+          </tbody>
+        </table>
+      </div>
+        
+      {% endblock %}
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

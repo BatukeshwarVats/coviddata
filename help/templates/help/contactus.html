@@ -1,0 +1,32 @@
+{% extends 'help/basic.html' %}
+
+{% block title%} Contact us.{% endblock %}
+{% block body %}
+<div class="container my-3">
+    <h3>Contact Us</h3>
+    <form action="/help/contactus/" method="post">{% csrf_token %}
+  <div class="form-group">
+    <label for="f_name">First Name</label>
+    <input type="text" class="form-control" id="fname" name='fname' placeholder="Enter Your First Name">
+  </div>
+  <div class="form-group">
+    <label for="l_name">Last Name</label>
+    <input type="text" class="form-control" id="lname" name='lname' placeholder="Enter Your Last Name">
+  </div>
+  <div class="form-group">
+    <label for="contact">Contact</label>
+    <input type="text" class="form-control" id="contactus" name='contactus' placeholder="Enter Your Email or Mobile Number.">
+  </div>
+
+
+   <div class="form-group">
+    <label for="msg">How May We Help You?</label>
+    <textarea class="form-control" id="message" name='message' rows="3"></textarea>
+  </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+</form>
+
+
+
+</div>
+{% endblock %}
