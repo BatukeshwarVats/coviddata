@@ -4,30 +4,30 @@
 {% block body %}
 <br>
 <br>
-<div>
+<div class="container my-3">
 <form action="/help/add_data/" method="post">{% csrf_token %}
 
   <h3>Add your data here and contribute for society.</h3>
-    <div class="form-group">
-        <label for="inputName">Resource person Name or Organisation Name</label>
+  <div class="form-group">
+  <label for="inputName">Resource person Name or Organisation Name</label>
         <input type="text" class="form-control" id="name" name="name" placeholder="Name">
     </div>
     <div class="form-group">
-      <div class="form-group col-md-6">
+      <div class="form-group ">
         <label for="inputEmail4">Email / Contact number</label>
         <input type="text" class="form-control" id="contact" name="contact" placeholder="Email or Contact number">
       </div>
-      <div class="form-group col-md-6">
+      <div class="form-group ">
         <label for="inputAddress">Detailed Address of Facility.</label>
         <input type="text" class="form-control" id="address" name="address" placeholder="Please provide proper address.">
       </div>
     </div>
-    <div class="form-group">
+    <div class="form-group ">
       <label for="inputDiscription">Discription of your Facility.</label>
       <input type="text" class="form-control" id="disc" name="disc" placeholder="Description.">
     </div>
 
-    <div class="form-group">
+    <div class="form-group ">
         <label for="inputTags">Tags</label>
         <select id="tags" name="tags" class="form-control">
           <option selected>Plasma Donor</option>
@@ -47,10 +47,10 @@
 
 
 
-    <div class="form-row">
+    <div class="form-row col-md-6">
       <div class="form-group col-md-6">
         <label for="inputCity">City</label>
-        <input type="text" class="form-control" id="city" name="city">
+        <input type="text" class="form-control" id="city" name="city" placeholder="City">
       </div>
       <div class="form-group col-md-4">
         <label for="inputState">State</label>
@@ -91,8 +91,9 @@
 
       
     </div>
+    <button type="submit" class="btn btn-success">Add Data</button>
+
     </div>
-    <button type="submit" class="btn btn-success">Add Data.</button>
 </form>
 </div>
 

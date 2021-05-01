@@ -1,5 +1,12 @@
 <!doctype html>
 <html lang="en">
+  <title>Talaash</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -11,30 +18,53 @@
     <title>{% block title%} {% endblock %}</title>
 
   </head>
-  <body>
+  <style>
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    .w3-row-padding img {margin-bottom: 12px}
+    /* Set the width of the sidebar to 120px */
+    .w3-sidebar {width: 120px;background: #222;}
+    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+    #main {margin-left: 120px}
+    /* Remove margins from "page content" on small screens */
+    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    </style>
+  <body class="w3-black">
+      <div>
+        <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+          <!-- Avatar image in top left corner -->
+          <!--<img src="/w3images/avatar_smoke.jpg" style="width:100%">-->
+          <a href="http://127.0.0.1:8000/" class="w3-bar-item w3-button w3-padding-large w3-black">
+            <i class="fa fa-home w3-xxlarge"></i>
+            <p>HOME</p>
+          </a>
+          <a href="http://127.0.0.1:8000/" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-search w3-xxlarge"></i>
+            <p>GET INSTANT HELP</p>
+          </a>
+          <a href="http://127.0.0.1:8000/help" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-globe w3-xxlarge"></i>
+            <p>TALAASH</p>
+          </a>
+          <a href="http://127.0.0.1:8000/help/add" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-eye w3-xxlarge"></i>
+            <p>ADD YOUR DATA</p>
+          </a>
+          <a href="http://127.0.0.1:8000/help/about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-user w3-xxlarge"></i>
+            <p>ABOUT US</p>
+          </a>
+          <a href="http://127.0.0.1:8000/help/contactus" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-envelope w3-xxlarge"></i>
+            <p>CONTACT US</p>
+          </a>
+        
+        </nav>
+      </div>
+
+
+
     <div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/help">Covid</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="/help">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/help/add">Add data</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/help/about">About us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/help/contactus">Contact Us</a>
-            </li>
-          </ul>
-        </div>
-    </nav>
+    
     </div>
     {% block body %} {% endblock %}
 
