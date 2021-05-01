@@ -5,8 +5,7 @@
 
 
 {% block body %}
-      <br>
-      <br>
+
 <div class="container">
       <form action="/help/search/" method="post">{% csrf_token %}
             
@@ -20,18 +19,22 @@
         <div class="form-group col-md-2">
           <label for="inputState">State</label>
           <select id="inputState" name="inputState" class="form-control">
+            <option selected>Andaman and Nicobar</option>
             <option selected>Andhra Pradesh</option>
             <option selected>Arunachal Pradesh</option>
             <option selected>Assam</option>
             <option selected>Bihar</option>
             <option selected>Chhatisgarh</option>
+            <option selected>Delhi</option>
             <option selected>Goa</option>
             <option selected>Gujrat</option>
             <option selected>Haryana</option>
             <option selected>Himachal Pradesh</option>
+            <option selected>Jammu and Kashmir</option>
             <option selected>Jharkhand</option>
             <option selected>Karnataka</option>
             <option selected>Kerala</option>
+            <option selected>Lakshadweep</option>
             <option selected>Madhya Pradesh</option>
             <option selected>Maharashtra</option>
             <option selected>Manipur</option>
@@ -39,6 +42,7 @@
             <option selected>Mizoram</option>
             <option selected>Nagaland</option>
             <option selected>Odisha</option>
+            <option selected>Puducherry</option>
             <option selected>Punjab</option>
             <option selected>Rajasthan</option>
             <option selected>Sikkim</option>
