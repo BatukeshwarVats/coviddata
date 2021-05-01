@@ -11,6 +11,73 @@ def index(request):
     context={'data_info':data_info}
     return render(request,'help/index.html',context)
 
+
+def ambulance(request):
+    tags="Ambulance"
+    data_info=Info.objects.filter(tags=tags)
+    context={'data_info':data_info}
+
+    return render(request,'help/ambulance.html',context)
+
+def medicines(request):
+    tags="Remdesivir"
+    data_info=Info.objects.filter(tags=tags)
+    context={'data_info':data_info}
+
+    return render(request,'help/medicines.html',context)
+
+def blood(request):
+    tags="Blood Donor"
+    data_info=Info.objects.filter(tags=tags)
+    context={'data_info':data_info}
+
+    return render(request,'help/blood.html',context)
+
+def beds(request):
+    tags="Beds"
+    data_info=Info.objects.filter(tags=tags)
+    context={'data_info':data_info}
+
+    return render(request,'help/beds.html',context)
+
+def consultation(request):
+    tags="Consultation"
+    data_info=Info.objects.filter(tags=tags)
+    context={'data_info':data_info}
+
+    return render(request,'help/consultation.html',context)
+
+def oxygen(request):
+    tags="Oxygen Cylinder"
+    data_info=Info.objects.filter(tags=tags)
+    context={'data_info':data_info}
+
+    return render(request,'help/oxygen.html',context)
+
+def plasma(request):
+    tags="Plasma"
+    data_info=Info.objects.filter(tags=tags)
+    context={'data_info':data_info}
+
+    return render(request,'help/plasma.html',context)
+
+def tiffin(request):
+    tags="Food"
+    data_info=Info.objects.filter(tags=tags)
+    context={'data_info':data_info}
+
+    return render(request,'help/tiffin.html',context)
+
+def others(request):
+    tags="Others"
+    data_info=Info.objects.filter(tags=tags)
+    context={'data_info':data_info}
+
+    return render(request,'help/others.html',context)
+
+
+
+
 def search(request):
     if request.method=="POST":
         city=request.POST.get('inputCity')
