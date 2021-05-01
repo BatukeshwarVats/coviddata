@@ -5,8 +5,10 @@
 
 
 {% block body %}
+<br>
+<br>
 
-<div class="container">
+<div class="container" style="margin-top: 30px;">
       <form action="/help/search/" method="post">{% csrf_token %}
             
         <div class="form-row">
@@ -73,7 +75,7 @@
     
             </select>
         </div>
-        <button type="submit" class="btn btn-success " ;">Search for help</button>
+        <button type="submit" class="btn btn-success " style="height: 37px; margin-top: 29px; margin-left: 4px;">Search for help</button>
   
   
 
@@ -84,10 +86,11 @@
       <br>
       <br>
 
-      <div class="container">
+      <div class="container" style="margin-left: 10%;">
         <h2 class="text-center"><u>Latest Resources.</u></h2><br>            
-        <table class="table table-dark table-striped">
-          <thead>
+        <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar" style="border-color: black;">
+        <table class="table table-scroll table-bordered table-striped text-center" style="border-color: black;">
+         <thead>
             <tr>
               <th>State</th>
               <th>City</th>
@@ -115,6 +118,7 @@
           {% endif %}
           </tbody>
         </table>
+      </div>
       </div>
         
       {% endblock %}
