@@ -81,8 +81,11 @@ def others(request):
 def search(request):
     if request.method=="POST":
         city=request.POST.get('inputCity')
+        city=city.upper()
         state=request.POST.get('inputState')
+        state=state.upper()
         tags=request.POST.get('tags')
+        tags=tags.upper()
         print(city)
         data_info=Info.objects.filter(city=city,state=state,tags=tags)
         print(state)
@@ -99,15 +102,22 @@ def add(request):
 
 def add_data(request):
     if request.method=="POST":
-        print(request)
         print(request.POST.get('name'))
         name=request.POST.get('name','')
+        name=name.upper()
         contact=request.POST.get('contact','')
+        contact=contact.upper()
         city=request.POST.get('city','')
+        city=city.upper()
         state=request.POST.get('state','')
+        state=state.upper()
         tags=request.POST.get('tags','')
+        tags=tags.upper()
         print(name)
-        print("Hey sexy")
+        print(contact)
+        print(city)
+        print(state)
+        print(tags)
         data=Info(name=name,contact=contact,city=city,state=state,tags=tags)
         data.save()
         print("Data added successfully")
