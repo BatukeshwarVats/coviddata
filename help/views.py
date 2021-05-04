@@ -20,7 +20,7 @@ def ambulance(request):
     return render(request,'help/ambulance.html',context)
 
 def medicines(request):
-    tags="Remdesivir"
+    tags="Medicines"
     data_info=Info.objects.filter(tags=tags)
     context={'data_info':data_info}
 
@@ -55,7 +55,7 @@ def oxygen(request):
     return render(request,'help/oxygen.html',context)
 
 def plasma(request):
-    tags="Plasma"
+    tags="Plasma Donor"
     data_info=Info.objects.filter(tags=tags)
     context={'data_info':data_info}
 
@@ -103,14 +103,12 @@ def add_data(request):
         print(request.POST.get('name'))
         name=request.POST.get('name','')
         contact=request.POST.get('contact','')
-        address=request.POST.get('address','')
-        disc=request.POST.get('disc','')
         city=request.POST.get('city','')
         state=request.POST.get('state','')
         tags=request.POST.get('tags','')
         print(name)
         print("Hey sexy")
-        data=Info(name=name,contact=contact,address=address,disc=disc,city=city,state=state,tags=tags)
+        data=Info(name=name,contact=contact,city=city,state=state,tags=tags)
         data.save()
         print("Data added successfully")
 
