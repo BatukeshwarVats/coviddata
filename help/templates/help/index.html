@@ -66,11 +66,11 @@
               <option selected>Plasma Donor</option>
               <option selected>Oxygen Cylinder</option>
               <option selected>Blood Donor</option>
-              <option selected>Remdesivir</option>
+              <option selected>Medicines</option>
               <option selected>Beds</option>
               <option selected>Food</option>
               <option selected>Ambulance</option>
-              <option selected>Consulataion</option>
+              <option selected>Consultation</option>
               <option selected>Others</option>
     
             </select>
@@ -86,10 +86,10 @@
       <br>
       <br>
 
-      <div class="container" style="margin-left: 10%;">
+      <div class="container" style="margin-left: 5%;">
         <h2 class="text-center"><u>Latest Resources.</u></h2><br>            
-        <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar" style="border-color: black;">
-        <table class="table table-scroll table-bordered table-striped text-center" style="border-color: black;">
+        <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar" style="border-color: black;margin-left: 8%;padding-right: 10%;">
+        <table class="table table-scroll table-bordered table-striped text-center" style="border-color: black;margin-left: 3%;padding-right: 10%;">
          <thead>
             <tr>
               <th>State</th>
@@ -97,7 +97,6 @@
               <th>Tags</th>
               <th>Name</th>
               <th>Contact</th>
-              <th>Discription</th>
             </tr>
           </thead>
           <tbody>
@@ -110,11 +109,10 @@
               <td>{{data.tags}}</td>
               <td>{{data.name}}</td>
               <td>{{data.contact}}</td>
-              <td>{{data.disc}}</td>
             </tr>
             {% endfor %}
           {% else %}
-            <p>No polls are available.</p>
+            <p>No data available.</p>
           {% endif %}
           </tbody>
         </table>
