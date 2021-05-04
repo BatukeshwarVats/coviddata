@@ -13,63 +13,63 @@ def index(request):
 
 
 def ambulance(request):
-    tags="Ambulance"
+    tags="AMBULANCE"
     data_info=Info.objects.filter(tags=tags)
     context={'data_info':data_info}
 
     return render(request,'help/ambulance.html',context)
 
 def medicines(request):
-    tags="Medicines"
+    tags="MEDICINES"
     data_info=Info.objects.filter(tags=tags)
     context={'data_info':data_info}
 
     return render(request,'help/medicines.html',context)
 
 def blood(request):
-    tags="Blood Donor"
+    tags="BLOOD DONOR"
     data_info=Info.objects.filter(tags=tags)
     context={'data_info':data_info}
 
     return render(request,'help/blood.html',context)
 
 def beds(request):
-    tags="Beds"
+    tags="BEDS"
     data_info=Info.objects.filter(tags=tags)
     context={'data_info':data_info}
 
     return render(request,'help/beds.html',context)
 
 def consultation(request):
-    tags="Consultation"
+    tags="CONSULTATION"
     data_info=Info.objects.filter(tags=tags)
     context={'data_info':data_info}
 
     return render(request,'help/consultation.html',context)
 
 def oxygen(request):
-    tags="Oxygen Cylinder"
+    tags="OXYGEN CYLINDER"
     data_info=Info.objects.filter(tags=tags)
     context={'data_info':data_info}
 
     return render(request,'help/oxygen.html',context)
 
 def plasma(request):
-    tags="Plasma Donor"
+    tags="PLASMA DONOR"
     data_info=Info.objects.filter(tags=tags)
     context={'data_info':data_info}
 
     return render(request,'help/plasma.html',context)
 
 def tiffin(request):
-    tags="Food"
+    tags="FOOD"
     data_info=Info.objects.filter(tags=tags)
     context={'data_info':data_info}
 
     return render(request,'help/tiffin.html',context)
 
 def others(request):
-    tags="Others"
+    tags="OTHERS"
     data_info=Info.objects.filter(tags=tags)
     context={'data_info':data_info}
 
