@@ -4,8 +4,6 @@ from django.db import models
 class Info(models.Model):
     name=models.CharField(max_length=30)
     contact=models.CharField(max_length=30, default="")
-    address=models.CharField(max_length=100, default="")
-    disc=models.CharField(max_length=200, default="")
     city=models.CharField(max_length=30, default="")
     tags=models.CharField(max_length=20, default="")
     state=models.CharField(max_length=30, default="")
