@@ -168,7 +168,7 @@ def index(request):
 def ambulance(request):
     final_data=[]
     for i in range(0,len(name)):
-        if tags[i]=="Ambulance":
+        if tags[i]=="AMBULANCE":
             final_data=final_data+[[name[i]]+[contact[i]]+[tags[i]]+[state[i]]+[city[i]]]
     context={'final_data':final_data}
     return render(request,'help/ambulance.html',context)
@@ -176,7 +176,7 @@ def ambulance(request):
 def medicines(request):
     final_data=[]
     for i in range(0,len(name)):
-        if tags[i]=="Medicines":
+        if tags[i]=="MEDICINES":
             final_data=final_data+[[name[i]]+[contact[i]]+[tags[i]]+[state[i]]+[city[i]]]
     context={'final_data':final_data}
     return render(request,'help/medicines.html',context)
@@ -184,7 +184,7 @@ def medicines(request):
 def blood(request):
     final_data=[]
     for i in range(0,len(name)):
-        if tags[i]=="Blood Donor":
+        if tags[i]=="BLOOD DONOR":
             final_data=final_data+[[name[i]]+[contact[i]]+[tags[i]]+[state[i]]+[city[i]]]
     context={'final_data':final_data}
     return render(request,'help/blood.html',context)
@@ -192,7 +192,7 @@ def blood(request):
 def beds(request):
     final_data=[]
     for i in range(0,len(name)):
-        if tags[i]=="Beds":
+        if tags[i]=="BEDS":
             final_data=final_data+[[name[i]]+[contact[i]]+[tags[i]]+[state[i]]+[city[i]]]
     context={'final_data':final_data}
     return render(request,'help/beds.html',context)
@@ -200,7 +200,7 @@ def beds(request):
 def consultation(request):
     final_data=[]
     for i in range(0,len(name)):
-        if tags[i]=="Consultation":
+        if tags[i]=="CONSULTATION":
             final_data=final_data+[[name[i]]+[contact[i]]+[tags[i]]+[state[i]]+[city[i]]]
     context={'final_data':final_data}
     return render(request,'help/consultation.html',context)
@@ -208,7 +208,7 @@ def consultation(request):
 def oxygen(request):
     final_data=[]
     for i in range(0,len(name)):
-        if tags[i]=="Oxygen Cylinder":
+        if tags[i]=="OXYGEN CYLINDER":
             final_data=final_data+[[name[i]]+[contact[i]]+[tags[i]]+[state[i]]+[city[i]]]
     context={'final_data':final_data}
     return render(request,'help/oxygen.html',context)
@@ -216,7 +216,7 @@ def oxygen(request):
 def plasma(request):
     final_data=[]
     for i in range(0,len(name)):
-        if tags[i]=="Plasma Donor":
+        if tags[i]=="PLASMA DONOR":
             final_data=final_data+[[name[i]]+[contact[i]]+[tags[i]]+[state[i]]+[city[i]]]
     context={'final_data':final_data}
     return render(request,'help/plasma.html',context)
@@ -224,7 +224,7 @@ def plasma(request):
 def tiffin(request):
     final_data=[]
     for i in range(0,len(name)):
-        if tags[i]=="Food":
+        if tags[i]=="FOOD":
             final_data=final_data+[[name[i]]+[contact[i]]+[tags[i]]+[state[i]]+[city[i]]]
     context={'final_data':final_data}
     return render(request,'help/tiffin.html',context)
@@ -232,7 +232,7 @@ def tiffin(request):
 def others(request):
     final_data=[]
     for i in range(0,len(name)):
-        if tags[i]=="Others":
+        if tags[i]=="OTHERS":
             final_data=final_data+[[name[i]]+[contact[i]]+[tags[i]]+[state[i]]+[city[i]]]
     context={'final_data':final_data}
     return render(request,'help/others.html',context)
@@ -241,14 +241,14 @@ def others(request):
 def search(request):
     if request.method=="POST":
         city=request.POST.get('inputCity')
-        city_1=city.upper()
+        city_a=city.upper()
         state=request.POST.get('inputState')
-        state_1=state.upper()
+        state_a=state.upper()
         tags=request.POST.get('tags')
-        tags_1=tags.upper()
+        tags_a=tags.upper()
         final_data=[]
         for i in range(0,len(name)):
-            if tags[i]==tags_1 & state[i]==state_1 & city[i]==city_1 :
+            if tags[i]==tags_a & state[i]==state_a & city[i]==city_a :
                 final_data=final_data+[[name[i]]+[contact[i]]+[tags[i]]+[state[i]]+[city[i]]]
         context={'final_data':final_data}
         return render(request,'help/try.html',context)
