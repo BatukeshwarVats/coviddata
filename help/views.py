@@ -240,15 +240,15 @@ def others(request):
 
 def search(request):
     if request.method=="POST":
-        city=request.POST.get('inputCity')
-        city_a=city.upper()
-        state=request.POST.get('inputState')
-        state_a=state.upper()
-        tags=request.POST.get('tags')
-        tags_a=tags.upper()
+        city_=request.POST.get('inputCity')
+        city_1=city_.upper()
+        state_=request.POST.get('inputState')
+        state_1=state_.upper()
+        tags_=request.POST.get('tags')
+        tags_1=tags_.upper()
         final_data=[]
         for i in range(0,len(name)):
-            if tags[i]==tags_a & state[i]==state_a & city[i]==city_a :
+            if tags[i]==tags_1 and state[i]==state_1 and city[i]==city_1 :
                 final_data=final_data+[[name[i]]+[contact[i]]+[tags[i]]+[state[i]]+[city[i]]]
         context={'final_data':final_data}
         return render(request,'help/try.html',context)
