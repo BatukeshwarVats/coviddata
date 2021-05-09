@@ -16,14 +16,14 @@
       </thead>
       <tbody>
       <!-- jinja2 Technique -->
-      {% if data_info %}  
-        {% for data in data_info %}
+      {% if final_data %}  
+        {% for data in final_data %}
                 <tr>
-                <td>{{data.state}}</td>
-                <td>{{data.city}}</td>
-                <td>{{data.tags}}</td>
-                <td>{{data.name}}</td>
-                <td>{{data.contact}}</td>
+                  <td>{{name.3}}</td>
+                  <td>{{name.4}}</td>
+                  <td>{{name.2}}</td>
+                  <td>{{name.0}}</td>
+                  <td>{{name.1}}</td>
                 </tr>
             {% endfor %}
       {% else %}
