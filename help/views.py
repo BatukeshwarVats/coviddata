@@ -142,7 +142,7 @@ def contactus(request):
         contact.save()
     return render(request, 'help/contactus.html')
     '''
-    def login():
+def login():
     scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
     creds = ServiceAccountCredentials.from_json_keyfile_name('secret.json', scope)
     client = gspread.authorize(creds)
